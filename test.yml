@@ -1,0 +1,7 @@
+- name: run playbook with shell command
+  hosts: all 
+  tasks:
+    - name: run playbook with shell command 
+      shell: "ansible-playbook -i './inventory.build' ./test_external.yml"
+      args:
+        chdir: "{{ playbook_dir }}"

@@ -1,0 +1,5 @@
+- name: Setup Tower
+  hosts: all 
+  tasks:
+    - name: run ping command 
+      ping:
