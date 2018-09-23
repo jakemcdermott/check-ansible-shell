@@ -15,7 +15,7 @@
         chdir: "{{ playbook_dir }}"
 
     - name: run ansible-inventory command
-      command: "ansible-inventory--inventory=inventorybuild --list"
+      command: "ansible-inventory --inventory=inventorybuild --list"
       args:
         chdir: "{{ playbook_dir }}"
 
