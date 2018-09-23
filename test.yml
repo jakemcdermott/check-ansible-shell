@@ -15,6 +15,9 @@
         chdir: "{{ playbook_dir }}"
 
     - name: run playbook with shell command 
-      shell: "ANSIBLE_NOCOLOR=1 ansible-playbook --inventory={{ playbook_dir }}/inventory-build.ini {{ playbook_dir }}/test_external.yml"
+      environment:
+        ANSIBLE_NOCOLOR: 1
+        ANSIBLE_HOST_KEY_CHECKING: 0
+      command: "ansible-playbook --inventory=./inventory-build.ini ./test_external.yml"
       args:
         chdir: "{{ playbook_dir }}"
