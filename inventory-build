@@ -1,5 +1,1 @@
-localhost ansible_connection=local ansible_python_interpreter="/usr/bin/env python"
-
-[all:vars]
-awx_official=true
-use_container_for_build=true
+localhost ansible_connection=local
