@@ -14,6 +14,14 @@
       args:
         chdir: "{{ playbook_dir }}"
 
+    - name: run playbook with shell command 
+      environment:
+        ANSIBLE_NOCOLOR: 1
+        ANSIBLE_HOST_KEY_CHECKING: 0
+      command: "cat inventorybuild"
+      args:
+        chdir: "{{ playbook_dir }}"
+
     - name: run ansible-inventory command
       command: "ansible-inventory --inventory=inventorybuild --list"
       args:
