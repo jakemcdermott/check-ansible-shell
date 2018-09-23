@@ -10,6 +10,11 @@
         chdir: "{{ playbook_dir }}"
 
     - name: run playbook with shell command 
-      shell: "ANSIBLE_NOCOLOR=1 ansible-playbook -i {{ playbook_dir }}/inventory-build.ini {{ playbook_dir }}/test_external.yml"
+      shell: "ansible-playbook --version"
+      args:
+        chdir: "{{ playbook_dir }}"
+
+    - name: run playbook with shell command 
+      shell: "ANSIBLE_NOCOLOR=1 ansible-playbook --inventory={{ playbook_dir }}/inventory-build.ini {{ playbook_dir }}/test_external.yml"
       args:
         chdir: "{{ playbook_dir }}"
