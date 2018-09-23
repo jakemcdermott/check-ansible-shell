@@ -18,6 +18,6 @@
       environment:
         ANSIBLE_NOCOLOR: 1
         ANSIBLE_HOST_KEY_CHECKING: 0
-      command: "ansible-playbook -vvv --inventory=./inventory-build.ini ./test_external.yml"
+      command: "ansible-playbook -vvv --inventory=inventory-build.ini test_external.yml"
       args:
         chdir: "{{ playbook_dir }}"
