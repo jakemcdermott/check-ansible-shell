@@ -2,6 +2,6 @@
   hosts: all 
   tasks:
     - name: run playbook with shell command 
-      shell: "ANSIBLE_NOCOLOR=1 ansible-playbook -i './inventory.build' ./test_external.yml"
+      shell: "ANSIBLE_NOCOLOR=1 ansible-playbook -i './inventory-build' ./test_external.yml"
       args:
         chdir: "{{ playbook_dir }}"
