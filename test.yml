@@ -31,6 +31,7 @@
       environment:
         ANSIBLE_NOCOLOR: 1
         ANSIBLE_HOST_KEY_CHECKING: 0
+        ANSIBLE_INVENTORY_ENABLED: 'script'
       command: "ansible-playbook -vvv --inventory=inventorybuild test_external.yml"
       args:
         chdir: "{{ playbook_dir }}"
