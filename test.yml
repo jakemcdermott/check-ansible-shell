@@ -18,12 +18,8 @@
       environment:
         ANSIBLE_NOCOLOR: 1
         ANSIBLE_HOST_KEY_CHECKING: 0
+        ANSIBLE_INVENTORY_ENABLED: 'script'
       command: "cat inventorybuild"
-      args:
-        chdir: "{{ playbook_dir }}"
-
-    - name: run ansible-inventory command
-      command: "ansible-inventory --inventory=inventorybuild --list"
       args:
         chdir: "{{ playbook_dir }}"
 
